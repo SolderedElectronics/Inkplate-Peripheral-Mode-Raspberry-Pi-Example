@@ -1,7 +1,5 @@
 # Inkplate Peripheral Mode Raspberry Pi Example
 
-![Inkplate Peripheral Mode Raspberry Pi Example](https://raw.githubusercontent.com/SolderedElectronics/Inkplate-Peripheral-Mode-Raspberry-Pi-Example/main/image.png)
-
 This repository contains an example Python script which can be run on a Raspberry Pi to drive any Inkplate board using peripheral mode.
 
 To get started, you will need:
@@ -11,23 +9,22 @@ To get started, you will need:
 
 ### What is peripheral mode?
 
-Peripheral mode is a sketch which is included in the [_Inkplate Library_](https://github.com/SolderedElectronics/Inkplate-Arduino-library/tree/master) which actually comes pre-flashed on your Inkplate board when you receive it. You can find it under the _Diagnostics_ subfolder in the examples for your particular board. 
+Peripheral mode is a sketch which is included in the [_Inkplate Library_](https://github.com/SolderedElectronics/Inkplate-Arduino-library/tree/master) and it actually comes pre-flashed on your Inkplate board when you receive it. You can find it under the _Diagnostics_ subfolder in the examples for your particular board. 
 
-Peripheral mode lets the user run commands from the Inkplate library via UART. This way, you can print text, draw shapes and even images from SD card all from sending commands via USB.
+Peripheral mode lets the user run commands from the Inkplate library via UART. This way, you can print text, draw shapes and even images from SD card all from sending commands via USB Serial at 115200 baud.
 
 ### How to use peripheral mode?
 
 To use peripheral mode with Raspberry Pi, follow these steps:
 1. Upload peripheral mode to your Inkplate device using Arduino IDE. In the Inkplate Library, it's under the _Diagnostics_ subfolder in the examples for your particular board.
-2. Modify the `inkplate_model` variable in `inkplate_peripheral_mode_example.py` so your Inkplate model is selected (just uncomment one line).
-3. Transfer the `inkplate_peripheral_mode_example.py` script from this repository to your Raspberry Pi and place it in a working directory.
-4. PySerial must be installed on the Raspberry Pi to enable Serial communication. To install it, simply run `sudo pip3 install pyserial` in the terminal.
-5. Connect Inkplate via USB to the Raspberry Pi.
-6. Run the Python script on Raspberry Pi by opening a terminal in the working directory and running the command `sudo python3 inkplate_peripheral_mode_example.py`.
+2. Transfer the `inkplate_peripheral_mode_example.py` script from this repository to your Raspberry Pi and place it in a working directory.
+3. PySerial must be installed on the Raspberry Pi to enable Serial communication. To install it, simply run `sudo pip3 install pyserial` in the terminal.
+4. Connect Inkplate via USB to the Raspberry Pi.
+5. Run the Python script on Raspberry Pi by opening a terminal in the working directory and running the command `sudo python3 inkplate_peripheral_mode_example.py`.
 
 ### What are the available commands?
 
-Some commands such as `display`, `clearDisplay`, `drawRect`, `fillCircle`, `print` (among others) are demonstrated in `inkplate_peripheral_mode_example.py`.
+Some commands such as `display`, `clearDisplay` and `print` are demonstrated in `inkplate_peripheral_mode_example.py`.
 
 For a detailed overview of all commands available for Peripheral mode, check [_the documentation_](https://inkplate.readthedocs.io/en/latest/peripheral-mode.html).
 
