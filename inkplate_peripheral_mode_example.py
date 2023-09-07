@@ -10,10 +10,9 @@ import time # For waiting
 # Function to find the first USB Serial device on Raspberry Pi
 def find_first_serial_device():
     ports = list(serial.tools.list_ports.comports())
-    # In case you have more than one USB device connected, uncomment the next line and find Inkplate there
-    print("List of all the founds COM ports:")
-    # Print the ports separated by a comma
-    print(*ports, sep = ", ")
+    # In case you have more than one USB device connected, uncomment the next lines and find Inkplate there
+    # print("List of all the founds COM ports:")
+    # print(*ports, sep = ", ")
     for p in ports:
         if "USB" in p.description or "USB" in p.device:
             return p.device
